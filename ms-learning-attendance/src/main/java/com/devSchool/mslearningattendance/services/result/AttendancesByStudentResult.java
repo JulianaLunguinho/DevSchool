@@ -1,18 +1,13 @@
 package com.devSchool.mslearningattendance.services.result;
 
 import com.devSchool.mslearningattendance.domain.Attendance;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 import java.util.UUID;
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
-@RequiredArgsConstructor
 public class AttendancesByStudentResult {
 
     private String fullName;

@@ -1,22 +1,17 @@
 package com.devSchool.mslearningattendance.controllers;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.http.ResponseEntity;
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
-@RequiredArgsConstructor
 public class ErrorMessage {
 
     private int code;
 
     private String message;
 
-    public static ResponseEntity createErrorMessage(int status, String message) {
+    public static ResponseEntity<ErrorMessage> createErrorMessage(int status, String message) {
         ErrorMessage errorMessage = new ErrorMessage(status, message);
         return ResponseEntity.status(status).body(errorMessage);
     }
